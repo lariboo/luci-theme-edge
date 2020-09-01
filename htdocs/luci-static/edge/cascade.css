@@ -38,18 +38,12 @@
 
 @font-face {
   font-family: 'argon';
-  src: url('fonts/argon.eot?vncylf');
-  src: url('fonts/argon.eot?vncylf#iefix') format('embedded-opentype'), url('fonts/argon.ttf?vncylf') format('truetype'), url('fonts/argon.woff?vncylf') format('woff'), url('fonts/argon.svg?vncylf#argon') format('svg');
+  src: url('fonts/argon.woff?vncylf') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-@font-face {
-  font-family: 'TypoGraphica';
-  src: url('fonts/TypoGraphica.eot?#iefix') format('embedded-opentype'), url('fonts/TypoGraphica.woff') format('woff'), url('fonts/TypoGraphica.ttf') format('truetype'), url('fonts/TypoGraphica.svg#TypoGraphica') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -457,7 +451,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     background: #5A8DEE;
 }
 select+.focus-input::before {
-	top: 2.35rem;
+	top: 2.12rem;
 }
 .node-main-login .focus-input::before {
 	top: 2.73rem;
@@ -846,7 +840,7 @@ header .fill .status * {
 }
 .main .main-left .nav li.slide .menu[data-title=Status]:before {
   content: "\e906";
-  color: #5A8DEE;
+  color: #5e72e4;
 }
 .main .main-left .nav li.slide .menu[data-title=System]:before {
   content: "\e90a";
@@ -862,7 +856,7 @@ header .fill .status * {
 }
 .main .main-left .nav li.slide .menu[data-title=VPN]:before {
   content: "\e90b";
-  color: #172b4d;
+  color: #8965e0;
 }
 .main .main-left .nav li.slide .menu[data-title=Network]:before {
   content: "\e908";
@@ -871,6 +865,26 @@ header .fill .status * {
 .main .main-left .nav li.slide .menu[data-title=Bandwidth_Monitor]:before {
   content: "\e90d";
   color: #2dce89;
+}
+.main .main-left .nav li.slide .menu[data-title=Docker]:before {
+  content: "\e911";
+  color: #6699ff;
+}
+.main .main-left .nav li.slide .menu[data-title=Statistics]:before {
+  content: "\e913";
+  color: #8965e0;
+}
+.main .main-left .nav li.slide .menu[data-title=Control]:before {
+  content: "\e912";
+  color: #5e72e4;
+}
+.main .main-left .nav li.slide .menu[data-title=Asterisk]:before {
+  content: "\e914";
+  color: #fb6340;
+}
+.main .main-left .nav li.slide .menu[data-title=Logout]:before {
+  content: "\e907";
+  color: #adb5bd;
 }
 .main .main-left .nav li.slide:hover {
   background: none;
@@ -1142,9 +1156,7 @@ tr > th,
 .cbi-tab-descr{
 	padding:1rem;
 }
-.cbi-map >.cbi-section>*:not(.cbi-tabmenu){
-	padding-left:0;
-}
+
 .table[width="100%"] > .tr:first-child > .td {
   margin: auto 0;
 }
@@ -1510,7 +1522,7 @@ ul.tabs,.tabmenu .tabs,#tabmenu .tabs,ul.cbi-tabmenu{
 .cbi-value {
   display: inline-block;
   width: 100%;
-  padding: 0.35rem 1rem 0.35rem 1rem;
+  padding: 0.5rem 1rem;
   line-height: 2.4rem;
 }
 .cbi-value-field >*{
@@ -2099,6 +2111,7 @@ textarea {
     border-radius: 2px;
   background-color: #242424;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+      max-height: 100% !important;
 }
 #syslog:focus {
   outline: 0;
